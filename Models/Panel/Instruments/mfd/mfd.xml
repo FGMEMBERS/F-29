@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <name>mfd</name>
+ <path>mfd.ac</path>
+
+ <model>
+    <path>Aircraft/T-38C/Models/Panel/Instruments/mfd/terrain-map-pixel.xml</path>
+	<offsets>
+      <x-m> -0.002 </x-m>
+      <y-m>0 </y-m>
+      <z-m>0.0 </z-m>
+	  <pitch-offset>-5</pitch-offset>
+    </offsets>
+  </model>
+
+   <animation>
+  <type>material</type>
+  <object-name>Lat</object-name>
+  <object-name>Lat-label</object-name>
+  <object-name>Long</object-name>
+  <object-name>Long-label</object-name>
+   <object-name>wptdist-label</object-name>
+    <object-name>wptdist</object-name>
+	 <object-name>ttd-label</object-name>
+	 <object-name>ttddist</object-name>
+ 
+  <ambient>
+    <red>1.0</red>
+    <green>0.0</green>
+    <blue>0.0</blue>
+  </ambient>
+  <diffuse>
+    <red>0.3</red>
+    <green>0.0</green>
+    <blue>0.0</blue>
+  </diffuse>
+  <emission>
+    <red>0.8</red>
+    <green>0.0</green>
+    <blue>0.0</blue>
+  </emission> 
+ </animation>
+
+ <text>
+  <name>Lat-label</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.005</character-size>
+  <offsets>
+   <x-m>0.01</x-m>
+   <y-m>-0.055</y-m>
+   <z-m>0.075</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">LAT:</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+
+ <text>
+  <name>Lat</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.005</character-size>
+  <offsets>
+   <x-m>0.01</x-m>
+   <y-m>-0.01</y-m>
+   <z-m>0.075</z-m>
+ 
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">number-value</type>
+  <format type="string">%3.5f</format>
+  <truncate type="bool">false</truncate>
+ <property>/position/latitude-string</property>
+  <alignment>right-top</alignment>
+ </text>
+
+ <text>
+  <name>Long-label</name>
+  <font>lcd.txf</font>
+   <character-size type="double">0.005</character-size>
+  <offsets>
+   <x-m>0.01</x-m>
+   <y-m>-0.055</y-m>
+   <z-m>0.068</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">LONG:</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+  
+ <text>
+  <name>Long</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.005</character-size>
+  <offsets>
+   <x-m>0.01</x-m>
+   <y-m>-0.01</y-m>
+   <z-m>0.068</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">number-value</type>
+  <format>%3.6f</format>
+  <truncate type="bool">false</truncate>
+ <property>/position/longitude-string</property>
+  <draw-text type="bool">true</draw-text>
+  <alignment>right-top</alignment>
+ </text>
+ 
+ 
+ <text>
+  <name>wptdist-label</name>
+  <font>lcd.txf</font>
+   <character-size type="double">0.005</character-size>
+  <offsets>
+   <x-m>0.01</x-m>
+   <y-m>0.01</y-m>
+   <z-m>0.075</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">WPT1:</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+ 
+ <text>
+  <name>wptdist</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.005</character-size>
+  <offsets>
+   <x-m>0.01</x-m>
+   <y-m>0.045</y-m>
+   <z-m>0.075</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">number-value</type>
+  <format>%4.1f</format>
+  <truncate type="bool">false</truncate>
+ <property>/instrumentation/gps/wp/wp[1]/distance-nm</property>
+  <draw-text type="bool">true</draw-text>
+  <alignment>right-top</alignment>
+ </text>
+  
+  
+   <text>
+  <name>ttd-label</name>
+  <font>lcd.txf</font>
+   <character-size type="double">0.005</character-size>
+  <offsets>
+   <x-m>0.01</x-m>
+   <y-m>0.013</y-m>
+   <z-m>0.068</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">TTD:</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+ 
+  <text>
+  <name>ttddist</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.005</character-size>
+  <offsets>
+   <x-m>0.01</x-m>
+   <y-m>0.045</y-m>
+   <z-m>0.068</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">number-value</type>
+  <format>%4.1f</format>
+  <truncate type="bool">false</truncate>
+ <property>/instrumentation/gps/wp/wp[1]/TTW</property>
+  <draw-text type="bool">true</draw-text>
+  <alignment>right-top</alignment>
+ </text>
+  
+</PropertyList>
